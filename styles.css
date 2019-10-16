@@ -9,52 +9,51 @@
 body {
     margin: 0;
     padding: 0;
-    background: #12c2e9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #FC466B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3F5EFB, #FC466B); 
 }
 
 .calculator-grid {
     display: grid;
-    justify-content: center;
     align-content: center;
+    justify-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-   
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+
+.calculator-grid > button {
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .75);
+
 }
 
 .output {
-    grid-column: 1 / -1;
     background: #373B44;
+    grid-column: 1 / -1;
     display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    word-wrap: break-word;
     align-items: flex-end;
     justify-content: space-around;
-    flex-direction: column;
     padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
-    font-size: 20px;
 }
 
-.output .previous-operand {
+.output > .previous-operand {
+    color: rgba(255, 255, 255, .90);
+    font-size: 1.50rem;
     padding: 10px;
-    color: rgba(255, 255, 255, .75);
-    font-size: 1.45rem;
 }
-.output .current-operand {
-    padding: 10px;
+
+.output > .current-operand {
     color: white;
     font-size: 2.5rem;
-}
-
- .calculator.grid, button {
-   border: 1px solid white;
-   font-size: 2rem;
-   cursor: pointer;
-   outline: none;
-   background: rgba(255, 255, 255, .75);
+    padding: 10px;
 }
 
 .span-two {
@@ -62,7 +61,5 @@ background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+
 }
 
 button:hover {
-    background: rgba(255, 255, 255, .9);
-    
+    background-color: rgba(255, 255, 255, .9);
 }
-
